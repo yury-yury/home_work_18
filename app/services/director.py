@@ -43,7 +43,7 @@ class DirectorService:
         director.name = data.get("name")
         return self.dao.update(director)
 
-    def delite(self, did: int):
+    def delete(self, did: int):
         """
         The function defines the method of the class .delete takes the record ID
         as a parameter, requests a record with the corresponding parameter,
