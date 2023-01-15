@@ -67,7 +67,7 @@ class MovieService:
         movie.director_id = data.get("director_id")
         return self.dao.update(movie)
 
-    def delite(self, mid: int):
+    def delete(self, mid: int):
         """
         The function defines the method of the class .delete takes the record ID
         as a parameter, requests a record with the corresponding parameter,
