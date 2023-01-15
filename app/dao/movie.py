@@ -20,7 +20,7 @@ class MovieDAO:
         of the "movie" table of the database containing these parameters in the corresponding
         columns and returns for further use. If there are no such records, returns an empty list.
         """
-        return self.session.query(Movie).filter(Movie.director_id == did, Movie.genre_id == gid)
+        return self.session.query(Movie).filter(Movie.director_id == did, Movie.genre_id == gid).all()
 
     def get_all_by_director(self, did: int):
         """
@@ -29,7 +29,7 @@ class MovieDAO:
         this parameter in the corresponding column and returns for further use.
         If there are no such records, returns an empty list.
         """
-        return self.session.query(Movie).filter(Movie.director_id == did)
+        return self.session.query(Movie).filter(Movie.director_id == did).all()
 
     def get_all_by_genre(self, gid: int):
         """
@@ -38,7 +38,7 @@ class MovieDAO:
         in the corresponding column and returns for further use.
         If there are no such records, returns an empty list.
         """
-        return self.session.query(Movie).filter(Movie.genre_id == gid)
+        return self.session.query(Movie).filter(Movie.genre_id == gid).all()
 
     def get_all(self, page: int):
         """
