@@ -67,5 +67,5 @@ class DirectorView(Resource):
         a DELETE request at the address "/directors/<int:did>", implements the search and deletion
         of the director from the database, returns an empty string in the form of JSON.
         """
-        director_service.delite(did)
+        director_service.delete(did)
         return ''
